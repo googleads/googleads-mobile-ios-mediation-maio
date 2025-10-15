@@ -22,22 +22,28 @@ let package = Package(
   products: [
     .library(
       name: "MaioAdapterTarget",
-      targets: ["MaioAdapterTarget"]
+      targets: ["MaioAdapterTarget", "MaioSDK"]
     )
   ],
   targets: [
     .target(
       name: "MaioAdapterTarget",
       dependencies: [
-        .target(name: "Adapter"),
+        .target(name: "MaioAdapter"),
       ],
       path: "MaioAdapterTarget"
     ),
     .binaryTarget(
-      name: "Adapter",
+      name: "MaioAdapter",
       url:
-        "https://dl.google.com/googleadmobadssdk/mediation/ios/maio/MaioAdapter-2.1.6.1.zip",
-      checksum: ""
+        "https://dl.google.com/googleadmobadssdk/mediation/ios/maio/MaioAdapter-2.2.0.0.zip",
+      checksum: "60e646231272f0c61508da1d1b45a3b4cb28bea520be50c06f999717158b72d5"
+    ),
+    .binaryTarget(
+      name: "MaioSDK",
+      url:
+        "https://github.com/imobile/MaioSDK-v2-iOS/releases/download/v2.2.0/Maio.xcframework.zip",
+      checksum: "75d70d45b58ab08019f1412a51f336aec20213eb490f04e8c5e9c312d5fa7917"
     ),
   ]
 )
