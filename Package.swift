@@ -25,11 +25,18 @@ let package = Package(
       targets: ["MaioAdapterTarget", "MaioSDK"]
     )
   ],
+  dependencies: [
+    .package(
+      url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git",
+      from: "12.0.0"
+    )
+  ],
   targets: [
     .target(
       name: "MaioAdapterTarget",
       dependencies: [
         .target(name: "MaioAdapter"),
+        .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads"),
       ],
       path: "MaioAdapterTarget"
     ),
