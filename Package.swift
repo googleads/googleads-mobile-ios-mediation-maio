@@ -1,4 +1,4 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.6
 
 // Copyright 2025 Google LLC.
 //
@@ -18,17 +18,21 @@ import PackageDescription
 
 let package = Package(
   name: "MaioAdapter",
-  platforms: [.iOS(.v12)],
+  platforms: [.iOS(.v14)],
   products: [
     .library(
       name: "MaioAdapterTarget",
-      targets: ["MaioAdapterTarget", "MaioSDK"]
+      targets: ["MaioAdapterTarget"]
     )
   ],
   dependencies: [
     .package(
+      url: "https://github.com/imobile/MaioSDK-v2-iOS.git",
+      exact: "2.2.0"
+    ),
+    .package(
       url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git",
-      from: "12.0.0"
+      from: "13.0.0"
     )
   ],
   targets: [
@@ -36,6 +40,7 @@ let package = Package(
       name: "MaioAdapterTarget",
       dependencies: [
         .target(name: "MaioAdapter"),
+        .product(name: "MaioSDK", package: "MaioSDK-v2-iOS"),
         .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads"),
       ],
       path: "MaioAdapterTarget"
@@ -43,14 +48,8 @@ let package = Package(
     .binaryTarget(
       name: "MaioAdapter",
       url:
-        "https://dl.google.com/googleadmobadssdk/mediation/ios/maio/MaioAdapter-2.2.0.0.zip",
-      checksum: "60e646231272f0c61508da1d1b45a3b4cb28bea520be50c06f999717158b72d5"
-    ),
-    .binaryTarget(
-      name: "MaioSDK",
-      url:
-        "https://github.com/imobile/MaioSDK-v2-iOS/releases/download/v2.2.0/Maio.xcframework.zip",
-      checksum: "75d70d45b58ab08019f1412a51f336aec20213eb490f04e8c5e9c312d5fa7917"
+        "https://dl.google.com/googleadmobadssdk/mediation/ios/maio/MaioAdapter-2.2.0.3.zip",
+      checksum: "e3a4ec482d801079d993a435d0fc838be297a2e8e1108b29917fc403308540ac"
     ),
   ]
 )
