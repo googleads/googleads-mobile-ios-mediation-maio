@@ -48,7 +48,7 @@ let package = Package(
     .binaryTarget(
       name: "MaioAdapter",
       url:
-        "https://dl.google.com/googleadmobadssdk/mediation/ios/maio/MaioAdapter-2.2.1.1.zip",
+        "https://dl.google.com/googleadmobadssdk/mediation/ios/maio/MaioAdapter-2.2.1.2.zip",
       checksum: "37b0bf1a572eced3276decaa017a34095aac7b4586248f596262d08d3c1c43b1"
     ),
   ]
