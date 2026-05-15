@@ -49,7 +49,7 @@ let package = Package(
       name: "MaioAdapter",
       url:
         "https://dl.google.com/googleadmobadssdk/mediation/ios/maio/MaioAdapter-2.2.1.2.zip",
-      checksum: "37b0bf1a572eced3276decaa017a34095aac7b4586248f596262d08d3c1c43b1"
+      checksum: "7079738c64e0404874940291c97a374fafc4bdd9fb9c7cd7b6eca032558e2f25"
     ),
   ]
 )
