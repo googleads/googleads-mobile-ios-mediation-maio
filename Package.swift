@@ -18,7 +18,7 @@ import PackageDescription
 
 let package = Package(
   name: "MaioAdapter",
-  platforms: [.iOS(.v14)],
+  platforms: [.iOS(.v15)],
   products: [
     .library(
       name: "MaioAdapterTarget",
@@ -28,7 +28,7 @@ let package = Package(
   dependencies: [
     .package(
       url: "https://github.com/imobile/MaioSDK-v2-iOS.git",
-      exact: "2.2.1"
+      exact: "v2.2.2"
     ),
     .package(
       url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git",
@@ -48,7 +48,7 @@ let package = Package(
     .binaryTarget(
       name: "MaioAdapter",
       url:
-        "https://dl.google.com/googleadmobadssdk/mediation/ios/maio/MaioAdapter-2.2.1.3.zip",
+        "https://dl.google.com/googleadmobadssdk/mediation/ios/maio/MaioAdapter-2.2.2.0.zip",
       checksum: "7079738c64e0404874940291c97a374fafc4bdd9fb9c7cd7b6eca032558e2f25"
     ),
   ]
