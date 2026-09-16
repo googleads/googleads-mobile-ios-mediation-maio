@@ -28,7 +28,7 @@ let package = Package(
   dependencies: [
     .package(
       url: "https://github.com/imobile/MaioSDK-v2-iOS.git",
-      exact: "v2.2.3"
+      exact: "2.2.3"
     ),
     .package(
       url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git",
